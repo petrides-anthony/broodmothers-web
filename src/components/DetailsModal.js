@@ -6,11 +6,20 @@ const DetailsModal = (props) => (
         isOpen={!!props.isDetailsModalOpen}
         contentLabel="isDetailsModalOpen"
     >
-        <h2>{props.title}</h2>
-        
+        <div className="header">
+            <div className="container">
+                <h2 className="header__title">{props.title}</h2>
+            </div>
+        </div>
+
         {props.children}
 
-        <button onClick={props.handleCloseDetailsModal}>Close</button>
+        <button 
+            onClick={props.handleCloseDetailsModal}
+            className="button button--link"
+        >
+            Close
+        </button>
     </Modal>
 );
 

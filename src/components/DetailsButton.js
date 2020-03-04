@@ -2,8 +2,11 @@ import React from 'react';
 
 const DetailsButton = (props) => (
     <div>
-        <button onClick={props.handleDetailsButton}>
-            Details...
+        <button 
+            className="button"
+            onClick={props.handleDetailsButton}
+        >
+            {props.buttonName}
         </button>
     </div>
 );

@@ -6,6 +6,10 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#app')
 
+// let rawdata = fs.readFileSync('./../content/content.json');
+// let content = JSON.parse(rawdata);
+// console.log(content);
+
 export default class BasePage extends React.Component {
     state = {
         modalContentType: null,
@@ -30,13 +34,13 @@ export default class BasePage extends React.Component {
         switch (this.state.modalContentType) {
             case 'CONTENT_1':
                 return {
-                    title: 'Content 1',
-                    content: '<p>Content 1</p>'
+                    title: 'Content I',
+                    content: '<p>Content I</p>'
                 };
             case 'CONTENT_2':
                 return {
-                    title: 'Content 2',
-                    content: '<p>Content 2</p>'
+                    title: 'Content II',
+                    content: '<p>Content II</p>'
                 };
             default:
                 return {
@@ -55,9 +59,11 @@ export default class BasePage extends React.Component {
                 <div className="container">
                     <DetailsButton
                         handleDetailsButton={() => this.handleDetailsButton('CONTENT_1')}
+                        buttonName="Button 1"
                     />
                     <DetailsButton
                         handleDetailsButton={() => this.handleDetailsButton('CONTENT_2')}
+                        buttonName="Button 2"
                     />
                 </div>
                 <DetailsModal

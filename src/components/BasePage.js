@@ -23,14 +23,16 @@ export default class BasePage extends React.Component {
         return (
             <div>
                 <Header />
-                <DetailsButton 
-                    handleDetailsButton={this.handleDetailsButton}
-                    modalOpen={this.state.isDetailsModalOpen}
-                />
-                <DetailsButton 
-                    handleDetailsButton={this.handleDetailsButton}
-                    modalOpen={this.state.isDetailsModalOpen}
-                />
+                <div className="container">
+                    <DetailsButton 
+                        handleDetailsButton={this.handleDetailsButton}
+                        modalOpen={this.state.isDetailsModalOpen}
+                    />
+                    <DetailsButton 
+                        handleDetailsButton={this.handleDetailsButton}
+                        modalOpen={this.state.isDetailsModalOpen}
+                    />
+                </div>
                 <DetailsModal
                     isDetailsModalOpen={this.state.isDetailsModalOpen}
                     handleDetailsButton={this.handleDetailsButton}

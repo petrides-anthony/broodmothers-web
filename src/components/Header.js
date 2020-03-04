@@ -14,4 +14,4 @@ Header.defaultProps = {
     subtitle: 'The place to refind'
 };
 
-export { Header as default }
+export default Header;

@@ -5,14 +5,11 @@ const DetailsModal = (props) => (
     <Modal
         isOpen={!!props.isDetailsModalOpen}
         contentLabel="isDetailsModalOpen"
+        closeTimeoutMS={200}
+        className="modal"
     >
-        <div className="header">
-            <div className="container">
-                <h2 className="header__title">{props.title}</h2>
-            </div>
-        </div>
-
-        {props.children}
+        <h2 className="modal__title">{props.title}</h2>
+        <p className="modal__body">{props.children}</p>
 
         <button 
             onClick={props.handleCloseDetailsModal}

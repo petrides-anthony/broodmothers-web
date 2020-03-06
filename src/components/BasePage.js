@@ -3,12 +3,14 @@ import Header from './Header';
 import DetailsButton from './DetailsButton';
 import DetailsModal from './DetailsModal';
 import Modal from 'react-modal';
+import content from './../content/content.json'
 
 Modal.setAppElement('#app')
 
-// let rawdata = fs.readFileSync('./../content/content.json');
-// let content = JSON.parse(rawdata);
-// console.log(content);
+// Content
+const mydata = content;
+const contentBlockOne = mydata.contentBlocks[0].properties
+const contentBlockTwo = mydata.contentBlocks[1].properties
 
 export default class BasePage extends React.Component {
     state = {
@@ -34,13 +36,13 @@ export default class BasePage extends React.Component {
         switch (this.state.modalContentType) {
             case 'CONTENT_1':
                 return {
-                    title: 'Content I',
-                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+                    title: contentBlockOne.title,
+                    content: contentBlockOne.body
                 };
             case 'CONTENT_2':
                 return {
-                    title: 'Content II',
-                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+                    title: contentBlockTwo.title,
+                    content: contentBlockTwo.body
                 };
             default:
                 return {
@@ -57,13 +59,16 @@ export default class BasePage extends React.Component {
             <div>
                 <Header />
                 <div className="container">
+                    <p>
+                        Introduction to my documentation project, currently using react modal.
+                    </p>
                     <DetailsButton
                         handleDetailsButton={() => this.handleDetailsButton('CONTENT_1')}
-                        buttonName="Button 1"
+                        buttonName={contentBlockOne.title}
                     />
                     <DetailsButton
                         handleDetailsButton={() => this.handleDetailsButton('CONTENT_2')}
-                        buttonName="Button 2"
+                        buttonName={contentBlockTwo.title}
                     />
                 </div>
                 <DetailsModal

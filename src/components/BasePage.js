@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import DetailsButton from './DetailsButton';
 import DetailsModal from './DetailsModal';
 import Modal from 'react-modal';
@@ -57,7 +56,6 @@ export default class BasePage extends React.Component {
         
         return (
             <div>
-                <Header />
                 <div className="container">
                     <p>
                         Introduction to my documentation project, currently using react modal.

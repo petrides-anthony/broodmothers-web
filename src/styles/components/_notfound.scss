@@ -1,0 +1,25 @@
+
+.notfound {
+    color: white;
+    font-size: 30px;
+    font-weight: 1000;
+    /* unvisited link */
+    a:link {
+        color: red;
+    }
+    
+    /* visited link */
+    a:visited {
+        color: white;
+    }
+    
+    /* mouse over link */
+    a:hover {
+        color: red;
+    }
+    
+    /* selected link */
+    a:active {
+        color: yellow;
+    }
+}

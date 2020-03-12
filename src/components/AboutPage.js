@@ -1,7 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import RenderCodeBlock from '../helpers/syntax-highlighter';
 
 const snippet = 'handleDetailsButton = (modalContentType) => {\nthis.setState(() => ({\nmodalContentType,\n isDetailsModalOpen: true\n})); \nconsole.log(this.state.isDetailsModalOpen)}';
@@ -19,7 +17,11 @@ export default class BasePage extends React.Component {
                     <p>
                         This project is designed to act as a living diary and documentation for recording and referencing the learning of vanilla js, node js and React.
                     </p>
-                    Highlighted Code Snippet: {RenderCodeBlock(snippet)}
+                    <h2>Code Blocks</h2>
+                    <p>
+                        The use of code blocks and snippets throughout this course are employed through the react-syntax-highlighter package. Example below:
+                    </p>
+                    {RenderCodeBlock(snippet)}
                 </div>
             </div>
         );

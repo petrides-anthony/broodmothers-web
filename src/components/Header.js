@@ -9,6 +9,7 @@ const Header = (props) => (
             <NavLink to="/" activeClassName="is-active" exact={true} className="header__nav">Home</NavLink>
             <NavLink to="/" activeClassName="is-active" exact={true} className="header__nav">Link I</NavLink>
             <NavLink to="/" activeClassName="is-active" exact={true} className="header__nav">Link II</NavLink>
+            <NavLink to="/about" activeClassName="is-active" exact={true} className="header__nav">About</NavLink>
         </div>
     </div>
 );

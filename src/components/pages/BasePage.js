@@ -1,8 +1,8 @@
 import React from 'react';
-import DetailsButton from './DetailsButton';
-import DetailsModal from './DetailsModal';
+import DetailsButton from './../DetailsButton';
+import DetailsModal from './../DetailsModal';
 import Modal from 'react-modal';
-import content from './../content/content.json'
+import content from './../../content/content.json'
 
 Modal.setAppElement('#app')
 

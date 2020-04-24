@@ -1,6 +1,6 @@
 
 .notfound {
-    color: white;
+    color: black;
     font-size: 30px;
     font-weight: 1000;
     /* unvisited link */
@@ -10,7 +10,7 @@
     
     /* visited link */
     a:visited {
-        color: white;
+        color: black;
     }
     
     /* mouse over link */
@@ -20,6 +20,6 @@
     
     /* selected link */
     a:active {
-        color: yellow;
+        color: grey;
     }
 }

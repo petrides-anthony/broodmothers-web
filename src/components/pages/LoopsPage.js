@@ -1,8 +1,12 @@
 import React from 'react';
 import Modal from 'react-modal';
-import RenderCodeBlock from '../helpers/syntax-highlighter';
+import RenderCodeBlock from '../../helpers/syntax-highlighter';
+import content from './../../content/content.json'
 
-const snippet = 'handleDetailsButton = (modalContentType) => {\nthis.setState(() => ({\nmodalContentType,\n isDetailsModalOpen: true\n})); \nconsole.log(this.state.isDetailsModalOpen)}';
+// Content
+const mydata = content;
+const contentBlockThree = mydata.contentBlocks[2].properties
+const snippet = contentBlockThree.body
 
 Modal.setAppElement('#app')
 
@@ -13,7 +17,7 @@ export default class BasePage extends React.Component {
         return (
             <div>
                 <div className="container">
-                    <h1>About</h1>
+                    <h1>Loops</h1>
                     <p>
                         This project is designed to act as a living diary and documentation for recording and referencing the learning of vanilla js, node js and React.
                     </p>
